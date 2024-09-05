@@ -20,7 +20,7 @@ jobs:
           node-version: '18'  # Specify Node.js version explicitly
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v2  # Updated to the latest version
+        run: npm ci  # Use `npm ci` for a clean install based on package-lock.json
 
       - name: Build project
         run: npm run build
